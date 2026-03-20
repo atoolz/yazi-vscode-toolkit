@@ -1,0 +1,18 @@
+# Invalid config for diagnostic tests
+
+[nonexistent_section]
+disabled = false
+
+[manager]
+unknown_option = true
+sort_by = 42
+show_hidden = "not a boolean"
+scrolloff = "abc"
+
+[preview]
+tab_size = "two"
+max_width = false
+
+[tasks]
+fake_option = "test"
+micro_workers = true

@@ -1,0 +1,81 @@
+{
+  "Yazi Starter Config": {
+    "prefix": "yazi-starter",
+    "body": [
+      "# Yazi Configuration",
+      "# https://yazi-rs.github.io/docs/configuration/yazi/",
+      "",
+      "[manager]",
+      "ratio = [1, 4, 3]",
+      "sort_by = \"${1|alphabetical,created,modified,natural,size,random|}\"",
+      "sort_dir_first = true",
+      "show_hidden = ${2|false,true|}",
+      "show_symlink = true",
+      "scrolloff = ${3:5}",
+      "",
+      "[preview]",
+      "tab_size = ${4:2}",
+      "max_width = ${5:600}",
+      "max_height = ${6:900}",
+      "",
+      "[tasks]",
+      "micro_workers = ${7:10}",
+      "macro_workers = ${8:25}",
+      "bizarre_retry = ${9:5}",
+      ""
+    ],
+    "description": "A complete Yazi starter configuration with common settings"
+  },
+  "Yazi Custom Opener": {
+    "prefix": "yazi-opener",
+    "body": [
+      "[opener.${1:name}]",
+      "run = '${2:command} \"$@\"'",
+      "desc = \"${3:Open with $1}\"",
+      "block = ${4|false,true|}",
+      ""
+    ],
+    "description": "Custom file opener definition"
+  },
+  "Yazi Plugin Previewer/Preloader": {
+    "prefix": "yazi-plugin",
+    "body": [
+      "[plugin]",
+      "prepend_previewers = [",
+      "  { name = \"*\", run = \"${1:plugin-name}\", mime = \"${2:text/*}\" },",
+      "]",
+      "prepend_preloaders = [",
+      "  { name = \"*\", run = \"${3:plugin-name}\", mime = \"${4:image/*}\" },",
+      "]",
+      ""
+    ],
+    "description": "Plugin configuration with custom previewers and preloaders"
+  },
+  "Yazi Sort Configuration": {
+    "prefix": "yazi-sort",
+    "body": [
+      "[manager]",
+      "sort_by = \"${1|alphabetical,created,modified,natural,size,random|}\"",
+      "sort_sensitive = ${2|false,true|}",
+      "sort_reverse = ${3|false,true|}",
+      "sort_dir_first = ${4|true,false|}",
+      "sort_translit = ${5|false,true|}",
+      ""
+    ],
+    "description": "Sort configuration for the file manager"
+  },
+  "Yazi Preview Settings": {
+    "prefix": "yazi-preview",
+    "body": [
+      "[preview]",
+      "tab_size = ${1:2}",
+      "max_width = ${2:600}",
+      "max_height = ${3:900}",
+      "cache_name = \"${4}\"",
+      "ueberzug_scale = ${5:1}",
+      "ueberzug_offset = [${6:0}, ${7:0}, ${8:0}, ${9:0}]",
+      ""
+    ],
+    "description": "Preview pane settings with dimensions and Ueberzug options"
+  }
+}
